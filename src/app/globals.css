@@ -1,26 +1,114 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --paper: #f3efe6;
+  --cream: #faf7f2;
+  --ink: #161412;
+  --muted: #4e4944;
+  --line: #ddd4c6;
+  --signal: #e23d12;
+  --signal-deep: #9c2c0c;
+  --pine: #24362e;
+  --sand: #e7dcc8;
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-paper: var(--paper);
+  --color-cream: var(--cream);
+  --color-ink: var(--ink);
+  --color-muted: var(--muted);
+  --color-line: var(--line);
+  --color-signal: var(--signal);
+  --color-signal-deep: var(--signal-deep);
+  --color-pine: var(--pine);
+  --color-sand: var(--sand);
+  --font-sans: var(--font-outfit);
+  --font-serif: var(--font-fraunces);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html {
+  scroll-behavior: smooth;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: var(--paper);
+  color: var(--ink);
+}
+
+::selection {
+  background: var(--signal-deep);
+  color: var(--cream);
+}
+
+:focus-visible {
+  outline: 2px solid var(--signal-deep);
+  outline-offset: 3px;
+}
+
+.skip-link {
+  position: fixed;
+  left: 1rem;
+  top: 1rem;
+  z-index: 60;
+  transform: translateY(-150%);
+  background: var(--ink);
+  color: var(--cream);
+  padding: 0.75rem 1rem;
+}
+
+.skip-link:focus {
+  transform: none;
+}
+
+[id] {
+  scroll-margin-top: 6rem;
+}
+
+summary::-webkit-details-marker {
+  display: none;
+}
+
+.faq-icon::before {
+  content: "+";
+}
+
+details[open] .faq-icon::before {
+  content: "–";
+}
+
+.legal-copy {
+  max-width: 42rem;
+}
+
+.legal-copy h2 {
+  margin-top: 2.75rem;
+  font-family: var(--font-fraunces), Georgia, serif;
+  font-size: clamp(1.6rem, 2vw, 2rem);
+  letter-spacing: -0.03em;
+  line-height: 1.15;
+}
+
+.legal-copy p,
+.legal-copy li {
+  margin-top: 0.9rem;
+  color: var(--muted);
+  line-height: 1.7;
+}
+
+.legal-copy ul {
+  margin-top: 0.4rem;
+  padding-left: 1.15rem;
+  list-style: disc;
+}
+
+.legal-copy a {
+  color: var(--signal-deep);
+  text-decoration: underline;
+  text-underline-offset: 0.18em;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
 }
