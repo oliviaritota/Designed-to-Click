@@ -12,7 +12,7 @@ function isCurrent(pathname: string, href: string) {
   return pathname === href || pathname.startsWith(`${href}/`);
 }
 
-export function SiteHeader() {
+export function SiteNav() {
   const pathname = usePathname();
   const [openPath, setOpenPath] = useState<string | null>(null);
   const open = openPath === pathname;

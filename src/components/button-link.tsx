@@ -8,12 +8,15 @@ export function ButtonLink({
 }: {
   href: string;
   children: ReactNode;
-  variant?: "solid" | "ghost";
+  variant?: "solid" | "ghost" | "accent" | "ghost-on-dark";
 }) {
-  const styles =
-    variant === "solid"
-      ? "bg-ink text-paper hover:bg-signal-deep"
-      : "border border-ink/15 bg-transparent text-ink hover:border-ink";
+  const styles = {
+    solid: "bg-ink text-paper hover:bg-signal hover:text-ink",
+    ghost: "border border-ink/15 bg-transparent text-ink hover:border-ink",
+    accent: "bg-signal text-ink hover:bg-paper",
+    "ghost-on-dark":
+      "border border-paper/30 bg-transparent text-paper hover:border-paper",
+  }[variant];
 
   return (
     <Link

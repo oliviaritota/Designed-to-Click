@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { Container } from "@/components/container";
+import { Mark } from "@/components/mark";
 import { contactEmail, legalNav, mainNav, siteName } from "@/lib/site";
 
 export function SiteFooter() {
@@ -7,7 +8,10 @@ export function SiteFooter() {
     <footer className="mt-auto border-t border-line bg-ink text-paper">
       <Container className="grid gap-12 py-16 sm:grid-cols-2 lg:grid-cols-12">
         <div className="lg:col-span-5">
-          <p className="font-serif text-3xl tracking-[-0.03em]">{siteName}</p>
+          <div className="flex items-center gap-3">
+            <Mark className="size-9" />
+            <p className="font-serif text-3xl tracking-[-0.03em]">{siteName}</p>
+          </div>
           <p className="mt-4 max-w-sm text-sm leading-relaxed text-paper/75">
             A web development studio for marketing sites with a clear job:
             explain the work, and make the next step obvious.

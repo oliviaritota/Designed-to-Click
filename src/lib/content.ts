@@ -1,53 +1,42 @@
 export const services = [
   {
-    slug: "new-websites",
-    title: "New websites",
+    slug: "custom-website-design",
+    number: "01",
+    label: "The Signature Service",
+    title: "Custom Website Design & Development",
     summary:
-      "A complete marketing site, from the sitemap through launch. For a practice, a small company, or a new offer that does not have a site yet.",
-    includes: [
-      "A sitemap and a page-by-page content outline",
-      "Design developed in the browser, not only in a static file",
-      "A Next.js build you own in your repository",
-      "Page titles, descriptions, and a sitemap for search engines",
-      "Launch help for the domain, and a walkthrough at handoff",
-    ],
+      "Beautiful, responsive websites built around each business’s unique identity, goals, and audience.",
+    idealFor:
+      "New businesses, entrepreneurs, and established brands launching a new website.",
   },
   {
-    slug: "redesigns",
-    title: "Redesigns",
+    slug: "website-redesign",
+    number: "02",
+    label: "The Transformation",
+    title: "Website Redesign & Optimization",
     summary:
-      "A new version of a site that no longer explains the work. We keep what is still true, remove what gets in the way, and rebuild when the current setup is holding the site back.",
-    includes: [
-      "A review of the live site and what it needs to do now",
-      "A revised structure, including which pages stay, merge, or go",
-      "Design and development of the new pages",
-      "Redirects for important existing URLs when we replace a live site",
-      "A launch plan so the changeover is deliberate",
-    ],
+      "Give outdated websites a fresh look, improved navigation, responsive layouts, and a better overall user experience.",
+    idealFor:
+      "Businesses with outdated, confusing, or poorly performing websites.",
   },
   {
-    slug: "landing-pages",
-    title: "Landing pages",
+    slug: "ecommerce",
+    number: "03",
+    label: "The Revenue Builder",
+    title: "E-Commerce Website Development",
     summary:
-      "One page for one offer. The headline, the proof, and the next step are the whole design problem.",
-    includes: [
-      "A single page with one clear action",
-      "Help tightening the words so the offer is specific",
-      "A layout that still reads clearly on a phone",
-      "Metadata so the page can be shared with a sensible title and description",
-    ],
+      "Custom-designed online storefronts that make it easy for customers to browse products, shop confidently, and complete purchases.",
+    idealFor: "Boutiques, product-based businesses, and growing online shops.",
   },
   {
-    slug: "site-care",
-    title: "Site care",
+    slug: "maintenance",
+    number: "04",
+    label: "The Ongoing Partnership",
+    title: "Website Maintenance & Support",
     summary:
-      "After launch, the site still needs a person. Care covers content updates, small improvements, and the work of keeping the build current.",
-    includes: [
-      "Text and image updates you send over",
-      "Small layout and content improvements",
-      "Dependency and framework updates on an agreed rhythm",
-      "A place to send something when it breaks",
-    ],
+      "Keep websites updated, secure, functional, and running smoothly with ongoing technical support, content updates, and routine improvements.",
+    idealFor:
+      "Existing clients who want continued support without managing their website themselves.",
   },
 ] as const;
 
@@ -78,7 +67,7 @@ export const projects = [
       "Practical details — location, hours, what to expect — where people look for them",
       "A phone layout that is as considered as the desktop page",
     ],
-    panel: "bg-signal text-paper",
+    panel: "bg-signal text-ink",
   },
   {
     slug: "campaign-pages",
@@ -92,7 +81,7 @@ export const projects = [
       "Proof near the claim it supports",
       "A page that stays fast, because it has a single job",
     ],
-    panel: "bg-pine text-paper",
+    panel: "bg-ink text-signal",
   },
   {
     slug: "content-sites",

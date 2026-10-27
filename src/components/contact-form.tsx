@@ -171,7 +171,7 @@ export function ContactForm() {
       </div>
       <button
         type="submit"
-        className="inline-flex items-center justify-center bg-ink px-5 py-3 text-sm font-medium text-paper transition-colors hover:bg-signal-deep"
+        className="inline-flex items-center justify-center bg-ink px-5 py-3 text-sm font-medium text-paper transition-colors hover:bg-signal hover:text-ink"
       >
         Open email to send
       </button>
